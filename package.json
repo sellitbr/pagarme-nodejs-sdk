@@ -1,5 +1,5 @@
 {
-  "version": "6.8.11",
+  "version": "6.8.17",
   "license": "MIT",
   "sideEffects": false,
   "main": "dist/cjs/index.js",
@@ -13,8 +13,8 @@
     "node": ">=14.17.0"
   },
   "scripts": {
-    "build": "rm -rf dist & tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json",
-    "prepare": "rm -rf dist & tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json",
+    "build": "rimraf dist && tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json",
+    "prepare": "rimraf dist && tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json",
     "lint": "eslint **/*.ts --ignore-path .eslintignore",
     "lint:fix": "eslint **/*.ts --ignore-path .eslintignore --fix"
   },
@@ -45,9 +45,9 @@
   },
   "dependencies": {
     "@apimatic/authentication-adapters": "^0.5.4",
-    "@apimatic/axios-client-adapter": "^0.3.4",
-    "@apimatic/core": "^0.10.12",
-    "@apimatic/schema": "^0.7.12"
+    "@apimatic/axios-client-adapter": "^0.3.7",
+    "@apimatic/core": "^0.10.16",
+    "@apimatic/schema": "^0.7.14"
   },
   "bugs": {
     "url": "https://github.com/pagarme/pagarme-nodejs-sdk/issues",
